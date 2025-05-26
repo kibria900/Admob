@@ -4,7 +4,7 @@ import NavBar from './NavBar'
 const Mediation = () => {
   return (
     <>
-    <NavBar></NavBar>
+    
     </>
   )
 }

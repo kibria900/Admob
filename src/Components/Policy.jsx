@@ -5,7 +5,7 @@ const Policy = () => {
   return (
   <>
   
-    <NavBar></NavBar>
+    
 
     
   </>

@@ -1,54 +1,37 @@
-import { useState } from 'react'
-import './App.css'
-import NavBar from './Components/NavBar';
+// src/App.jsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout';
 import Bannar from './Components/Bannar';
+import Apps from './Components/Apps';
+import Reports from './Components/Reports';
+import Mediation from './Components/Mediation';
+import Campaigns from './Components/Campaigns';
+import Policy from './Components/Policy';
+import Help from './Components/Help';
 import Login from './Components/Login';
 import SingUp from './Components/SingUp';
-import Apps from './Components/Apps';
-import Campaigns from './Components/Campaigns';
-import Help from './Components/Help';
-import Mediation from './Components/Mediation';
-import Policy from './Components/Policy';
-import Reports from './Components/Reports';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-
-
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      {/* <NavBar></NavBar> */}
-
-
-      <BrowserRouter>
-      
+    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<NavBar/>}></Route>
-        <Route path='/Apps' element={<Apps/>}></Route>
-        <Route path='/Campaigns' element={<Campaigns/>}></Route>
-        <Route path='/Help' element={<Help/>}></Route>
-        <Route path='/Mediation' element={<Mediation/>}></Route>
-        <Route path='/Policy' element={<Policy/>}></Route>
-        <Route path='/Reports' element={<Reports/>}></Route>
-        <Route path='/Login' element={<Login/>}></Route>
-        <Route path='/SingUp' element={<SingUp/>}></Route>
+        {/* Layout Route with NavBar and Outlet */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Bannar />} />
+          <Route path="Apps" element={<Apps />} />
+          <Route path="Reports" element={<Reports />} />
+          <Route path="Mediation" element={<Mediation />} />
+          <Route path="Campaigns" element={<Campaigns />} />
+          <Route path="Policy" element={<Policy />} />
+          <Route path="Help" element={<Help />} />
+        </Route>
+
+        {/* Outside Layout Routes (without NavBar) */}
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SingUp" element={<SingUp />} />
       </Routes>
-      </BrowserRouter>
-
-
-
-
-
-
-
-      {/* <Bannar></Bannar> */}
-      {/* <Login></Login>
-      <SingUp></SingUp> */}
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

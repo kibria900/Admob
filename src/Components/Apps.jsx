@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 const Apps = () => {
   return (
    <>
-   <NavBar></NavBar>
+  
    </>
   )
 }

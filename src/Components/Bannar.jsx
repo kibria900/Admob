@@ -24,7 +24,7 @@ const Bannar = () => {
   return (
     <>
     
-    <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto mt-10">
+    {/* <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto mt-10">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Create an Account</h2>
       
       <form className="space-y-4">
@@ -86,7 +86,7 @@ const Bannar = () => {
           Log in
         </a>
       </p>
-    </div>
+    </div> */}
 
 
 
