@@ -64,12 +64,14 @@ const NavBar = () => {
             <option value="en">English</option>
             <option value="bn">বাংলা</option>
           </select>
-          <button className="py-1 px-3 bg-amber-100 hover:bg-amber-800 text-amber-700 hover:text-white font-medium rounded text-sm">
+
+
+        <NavLink to="/Login" > <button className="py-1 px-3 bg-amber-100 hover:bg-amber-800 text-amber-700 hover:text-white font-medium rounded text-sm"> 
             Log In
-          </button>
-          <button className="py-1 px-3 bg-white text-red-600 hover:bg-black hover:text-white font-medium rounded text-sm">
+          </button> </NavLink>
+        <NavLink to="/SingUp"> <button className="py-1 px-3 bg-white text-red-600 hover:bg-black hover:text-white font-medium rounded text-sm">
             Sign Up
-          </button>
+          </button> </NavLink>
         </div>
       </div>
 
@@ -89,6 +91,8 @@ const NavBar = () => {
         </div>
       </div>
     </>
+
+    
   );
 };
 
