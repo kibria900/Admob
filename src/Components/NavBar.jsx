@@ -16,19 +16,19 @@ const NavBar = () => {
 
   return (
     <>
-     
-      <div className="fixed top-0 z-50 w-full bg-gray-100 shadow-md px-6 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-        
-          <button onClick={toggleNavSidebar} className="text-gray-700 hover:text-black transition">
+      {/* Navbar */}
+      <div className="fixed top-0 z-50 w-full bg-gray-100 shadow-md px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          {/* Hamburger for Mobile */}
+          <button onClick={toggleNavSidebar} className="text-gray-700 hover:text-black transition md:hidden">
             <Menu className="w-6 h-6" />
           </button>
 
-          
+          {/* Logo */}
           <img src={Logo} alt="logo" className="h-8" />
 
-        
-          <nav>
+          {/* Desktop Nav */}
+          <nav className="hidden md:block">
             <ul className="flex gap-x-6 text-sm font-medium">
               <li><NavLink to="/" className={({ isActive }) => getNavLinkClass(isActive)}>Home</NavLink></li>
               <li><NavLink to="/Apps" className={({ isActive }) => getNavLinkClass(isActive)}>Apps</NavLink></li>
@@ -41,8 +41,8 @@ const NavBar = () => {
           </nav>
         </div>
 
-      
-        <div className="flex items-center gap-3">
+        {/* Right Section */}
+        <div className="hidden md:flex items-center gap-3">
           <div className="relative w-64">
             <input
               type="text"
@@ -78,8 +78,9 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="relative">
-        <div className={`fixed top-[60px] left-0 w-64 h-full bg-gray-400 text-white p-5 shadow-lg transition-transform duration-300 z-40 ${navSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
+      {/* Mobile Sidebar */}
+      <div className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform transition-transform duration-300 z-40 ${navSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
+        <div className="p-5">
           <h2 className="text-lg font-semibold mb-6 border-b pb-2">Menu</h2>
           <ul className="space-y-4 text-sm">
             <li><NavLink to="/" className={({ isActive }) => getNavLinkClass(isActive)}>Home</NavLink></li>
@@ -90,9 +91,28 @@ const NavBar = () => {
             <li><NavLink to="/Policy" className={({ isActive }) => getNavLinkClass(isActive)}>Policy Center</NavLink></li>
             <li><NavLink to="/Help" className={({ isActive }) => getNavLinkClass(isActive)}>Help</NavLink></li>
           </ul>
+
+          <div className="mt-8 space-y-2">
+            <select className="w-full text-sm rounded-md px-2 py-1 bg-gray-200 text-black">
+              <option value="en">English</option>
+              <option value="bn">বাংলা</option>
+            </select>
+
+            <NavLink to="/Login">
+              <button className="w-full py-1 px-3 bg-amber-100 hover:bg-amber-800 text-amber-700 hover:text-white font-medium rounded text-sm">
+                Log In
+              </button>
+            </NavLink>
+            <NavLink to="/SingUp">
+              <button className="w-full py-1 px-3 bg-white text-red-600 hover:bg-black hover:text-white font-medium rounded text-sm">
+                Sign Up
+              </button>
+            </NavLink>
+          </div>
         </div>
       </div>
 
+      {/* Padding below fixed navbar */}
       <div className="pt-16"></div>
     </>
   );
