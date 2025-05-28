@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import Footer from './Footer';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -83,6 +84,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

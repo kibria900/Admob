@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import Footer from './Footer';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -94,6 +95,7 @@ const SignUp = () => {
           </p>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

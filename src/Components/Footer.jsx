@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo & Name */}
         <div>
-          <h1 className="text-2xl font-bold text-white">Kibria</h1>
+          <h1 className="text-2xl font-bold text-white">Golam Kibria Hassan</h1>
           <p className="mt-2 text-sm text-gray-400">
             Passionate Full-Stack Developer. Crafting web experiences with React & Node.js.
           </p>
