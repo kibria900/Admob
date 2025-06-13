@@ -150,7 +150,7 @@ const NavBar = () => {
       </div>
 
       {/* Padding for content below fixed navbar */}
-      <div className="pt-16"></div>
+      
     </>
   );
 };
