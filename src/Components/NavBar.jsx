@@ -40,7 +40,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink to="/Apps" className={({ isActive }) => getNavLinkClass(isActive)}>
-                  Apps
+                  App
                 </NavLink>
               </li>
               <li>
