@@ -9,7 +9,7 @@ const Layout = () => {
       <NavBar />
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         <Outlet />
       </main>
 
