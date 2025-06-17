@@ -31,6 +31,8 @@ const apps = [
   },
 ];
 
+const colors = ['bg-red-500', 'bg-green-500', 'bg-blue-500' , 'bg-green-500']
+
 const Apps = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-16 px-4 md:px-20">
@@ -45,10 +47,11 @@ const Apps = () => {
 
         {/* Apps List */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {apps.map((app) => (
+          {apps.map((app,index) => (
             <div
               key={app.id}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition"
+              className={`${colors[index]}  rounded-lg shadow-md p-6 hover:shadow-lg transition `}
+             
             >
               <div className="text-5xl mb-4">{app.icon}</div>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
